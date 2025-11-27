@@ -1,5 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import { z, ZodType } from "zod";
+import { AuthService } from "./auth";
+
 export class ApiService {
   private axiosInstance: AxiosInstance;
 
@@ -108,8 +110,8 @@ export class ApiService {
   }
 
   private getAuthToken() {
-    // TODO, implement
-    return "";
+    const authService = new AuthService();
+    return authService.getToken();
   }
 
   private httpErrorHandler(error: unknown | AxiosResponse): never {
