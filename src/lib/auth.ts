@@ -1,7 +1,6 @@
 import { jwtDecode } from 'jwt-decode';
-// /Users/bradyryun/Projects/Personal/top-content/apps/ui/src/lib/api/keywords.ts
 
-const storageKey = "tcat";
+const storageKey = "auth_token";
 const cookieExpiration = 30; // 30 days
 const cookieOptions = "SameSite=Strict; Secure"
 
